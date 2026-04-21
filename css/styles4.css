@@ -1,0 +1,19 @@
+.cajas{
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.cajas-2{
+    padding: 10px;
+    border: 2px dotted black;
+}
+
+.cajas, .cajas-2{
+    margin: 8px;
+    width: 300px;
+}
+
+.seccion-2{
+    display: flex;
+    align-items: center;
+}
