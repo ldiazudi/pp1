@@ -1,0 +1,14 @@
+.nav-bar{
+    display: flex;
+    text-align: start;
+    color: blue;
+    background-color: grey;
+    border: 2px solid black;
+}
+
+a{
+    padding: 6px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

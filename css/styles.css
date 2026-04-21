@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+h3 {
+    color: red;
+}
+
+p{
+    color: green;
+    font-family: italic;
+    background-color: yellow;
+}
+
+h1{
+    color: blue;
+    text-decoration: underline;
+}
+
+.error{
+    color: red;
+    font-weight: bold;
+}
