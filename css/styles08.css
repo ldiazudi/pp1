@@ -1,10 +1,12 @@
 .nav-bar{
     display: flex;
-    text-align: start;
+    text-align: justify;
     color: blue;
     background-color: grey;
     border: 2px solid black;
-    position: fixed;
+    position: sticky;
+    margin: -8px;
+    top: 0;
 }
 
 a{
