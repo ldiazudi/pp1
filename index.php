@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destino.php</title>
 </head>
+
 <body>
     <?php
 
@@ -15,7 +17,7 @@
     //         echo $a;
     //         $a++;
     //     }
-    
+
     // echo '<table border="1" cellpadding="5" cellspacing="0">';
     // echo '<tr><th>X</th>';
 
@@ -50,10 +52,10 @@
 
     // echo sacarMayor(1, 10);
 
-    
+
     // $Nombre = "";
     // $Apellido = "";
-    
+
 
     // echo "Variable $Nombre: " . $_POST["Nombre"] . "<br>";
 
@@ -88,74 +90,131 @@
     // $e1->pagaImpuesto();
     // $e2->pagaImpuesto();
 
-    class Persona {
-        private $nombre;
-        private $edad;
+    // class Persona
+    // {
+    //     private $nombre;
+    //     private $edad;
 
-        function setNombre($nombre){
-            $this->nombre = $nombre;
+    //     function setNombre($nombre)
+    //     {
+    //         $this->nombre = $nombre;
+    //     }
+
+    //     function setEdad($edad)
+    //     {
+    //         $this->edad = $edad;
+    //     }
+
+    //     function getEdad()
+    //     {
+    //         return $this->edad ?? 0;
+    //     }
+
+    //     function getNombre()
+    //     {
+    //         return $this->nombre;
+    //     }
+
+    //     function mostrar()
+    //     {
+    //         return $this->nombre . " || " . $this->edad;
+    //     }
+    // }
+
+    // class Empleado extends Persona
+    // {
+    //     private $sueldo;
+
+
+    //     function setSueldo($sueldo)
+    //     {
+    //         $this->sueldo = $sueldo;
+    //     }
+
+    //     function getSueldo()
+    //     {
+    //         return $this->sueldo ?? 0;
+    //     }
+
+    //     function mostrar()
+    //     {
+    //         return parent::mostrar() . " || "  . $this->sueldo;
+    //     }
+    // }
+
+
+
+    // $e1 = new Empleado();
+    // $e1->setSueldo(123456);
+    // $e1->setNombre("GERMAN");
+    // $e1->setEdad(18);
+
+    // echo $e1->getSueldo();
+
+
+    // echo "<br>";
+
+    // $p1 = new Persona();
+    // $p1->setNombre("Tade");
+    // $p1->setEdad(10);
+    // echo $p1->getNombre();
+    // echo "<br>";
+    // echo $p1->getEdad() . "<br>";
+
+    // echo $p1->mostrar();
+    // echo "<br>";
+    // echo $e1->mostrar();
+
+    // 
+
+    class Tabla {
+        private $celdas = array();
+
+        function add($celda){
+            $this->celdas[] = $celda; 
         }
 
-        function setEdad($edad){
-            $this->edad = $edad;
+        function mostrarCeldas(){
+            foreach($celdas as $c){
+                echo "Celda numero: " . $c->getNumero();
+            }
         }
-
-        function getEdad(){
-            return $this->edad ?? 0 ;
-        }
-
-        function getNombre(){
-            return $this->nombre;
-        }
-
-        function mostrar(){
-            return $this->nombre . " || " . $this->edad;
-        }
-
     }
 
-    class Empleado extends Persona {
-        private $sueldo;
+    class Celda {
+        private $nro;
+        private $texto;
 
-
-        function setSueldo($sueldo){
-            $this->sueldo = $sueldo;
+        function getNumero()
+        {
+            return $this->nro;
         }
 
-        function getSueldo(){
-            return $this->sueldo ?? 0;
+        function getTexto()
+            {
+                return $this->texto;
+            }
+
+        function setNumero($n)
+        {
+            $this->nro = $n;
         }
 
-        function mostrar(){
-            return parent::mostrar() . " || "  . $this->sueldo;
+        function setTexto($t)
+        {
+            $this->texto = $t;
         }
-        
+    }
+
+        for ($size=1;$size<=10;$size++)
+    {
+        //continuar aca
     }
 
 
- 
-    $e1 = new Empleado();
-    $e1->setSueldo(123456);
-    $e1->setNombre("GERMAN");
-    $e1->setEdad(18);
 
-    echo $e1->getSueldo();
-    
+    ?>
 
-    echo "<br>";
-
-    $p1 = new Persona();
-    $p1->setNombre("Tade");
-    $p1->setEdad(10);
-    echo $p1->getNombre();
-    echo "<br>";
-    echo $p1->getEdad() . "<br>";
-
-    echo $p1->mostrar();
-    echo "<br>";
-    echo $e1->mostrar();
-
-?>  
-    
 </body>
+
 </html>
