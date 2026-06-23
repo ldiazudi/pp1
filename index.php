@@ -52,20 +52,44 @@
 
     // echo sacarMayor(1, 10);
 
-
+    // //EJERCICIO 14 DONE
     // $Nombre = "";
     // $Apellido = "";
 
 
-    // echo "Variable $Nombre: " . $_POST["Nombre"] . "<br>";
+    // function validar($name, $surname ){
+    //     if($name === "" || $surname === ""){
+    //         throw new Exception ("Los campos nombre o apellido no estan completos");
+    //     }
+    // }
 
-    // echo "Variable $Apellido: " . $_POST["Apellido"] . "<br>";
+    // try{
 
-    // echo "Variable Sexo: " . ($_POST["Sexo"] ?? "Poco") . "<br>";
-    // echo "Variable Estado: " . $_POST["Estado"] . "<br>";
-    // echo "Variable INFO: " . ($_POST["info"] ?? "NO") . "<br>";
-    // echo "Variable TERMINOS: " . ($_POST["terms"] ?? "NO") . "<br>";
+    //     validar($_POST["Nombre"], $_POST["Apellido"]);
 
+    //     echo "Variable $Nombre: " . $_POST["Nombre"] . "<br>";
+    
+    //     echo "Variable $Apellido: " . $_POST["Apellido"] . "<br>";
+    
+    //     echo "Variable Sexo: " . ($_POST["Sexo"] ?? "") . "<br>";
+    //     echo "Variable Estado: " . $_POST["Estado"] . "<br>";
+    //     echo "Variable INFO: " . ($_POST["info"] ?? "NO") . "<br>";
+    //     echo "Variable TERMINOS: " . ($_POST["terms"] ?? "NO") . "<br>";
+
+    // } catch(Exception $e){
+    //     echo 'hay una excepcion: ' . $e->getMessage() . "<br>";
+    //     echo "<a href='./ejer070426/ejer11.html'>Volver al form</a>";
+    // }
+
+    // //EJ 14 FIN
+
+
+
+
+
+
+
+    
     // class Empleado {
     //     private $nombre = "";
     //     private $edad = 0;
@@ -167,49 +191,126 @@
 
     // 
 
-    class Tabla {
-        private $celdas = array();
+    // class Tabla {
+    //     private $celdas = array();
 
-        function add($celda){
-            $this->celdas[] = $celda; 
+    //     function add($celda){
+    //         $this->celdas[] = $celda; 
+    //     }
+
+    //     function mostrarCeldas(){
+    //         foreach($celdas as $c){
+    //             echo "Celda numero: " . $c->getNumero();
+    //         }
+    //     }
+    // }
+
+    // class Celda {
+    //     private $nro;
+    //     private $texto;
+
+    //     function getNumero()
+    //     {
+    //         return $this->nro;
+    //     }
+
+    //     function getTexto()
+    //         {
+    //             return $this->texto;
+    //         }
+
+    //     function setNumero($n)
+    //     {
+    //         $this->nro = $n;
+    //     }
+
+    //     function setTexto($t)
+    //     {
+    //         $this->texto = $t;
+    //     }
+    // }
+
+    //     for ($size=1;$size<=10;$size++)
+    // {
+    //     //continuar aca ej 13.
+    // }
+
+
+    //EJERCICIO 15
+    class Cine {
+        private $salas = array();
+
+        function add($s){
+            $this->salas[] = $s; 
         }
 
-        function mostrarCeldas(){
-            foreach($celdas as $c){
-                echo "Celda numero: " . $c->getNumero();
-            }
+        function vender($cantidad, $nroSala){
+            
         }
+
+        function mostrarOcupacion(){
+            
+        }
+
+        function getSalas()
+        {
+            return $this->salas[];
+        }
+
+        function setSalas($n)
+        {
+            $this->salas[] = $n;
+        }
+
     }
 
-    class Celda {
+    class Sala {
         private $nro;
-        private $texto;
+        private $cantidadButacas;
+        private $butacasOcupadas;
 
-        function getNumero()
+        function __construct($cantidadButacas){
+            setCantidadButacas($cantidadButacas)
+            
+        }
+
+        function ocuparButacas($cantidad){
+
+        }
+
+        function getNro()
         {
             return $this->nro;
         }
 
-        function getTexto()
-            {
-                return $this->texto;
-            }
+        function getCantidadButacas()
+        {
+            return $this->cantidadButacas;
+        }
 
-        function setNumero($n)
+        function getButacasOcupadas()
+        {
+            return $this->butacasOcupadas;
+        }
+
+
+        function setNro($n)
         {
             $this->nro = $n;
         }
 
-        function setTexto($t)
+        function setCantidadButacas($c)
         {
-            $this->texto = $t;
+            $this->cantidadButacas = $c;
         }
+
+        function setButacasOcupadas($n)
+        {
+            $this->butacasOcupadas = $n;
+        }
+
     }
 
-        for ($size=1;$size<=10;$size++)
-    {
-        //continuar aca
-    }
 
 
 
