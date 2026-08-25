@@ -1,16 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Listado de Productos{% endblock %}
+{% block title %}Lista de productos{% endblock %}
 
 {% block body %}
     <header class="header">
-        <h1 class="title">Mi Carrito de Compras</h1>
+        <h1 class="title">Carrito de Compras</h1>
+
+        <nav>
+            <a class="btn-ligth" href="#">Ver Orden</a>
+            <a class="btn-ligth" href="#">Salir</a>
+        </nav>
     </header>
 
-    <main style="padding: 20px;">
-        <p>{{ mensaje }}</p>
-        
-        {# Botón de ejemplo para usar los estilos requeridos #}
-        <button class="btn-light">Ver más detalles</button>
+    <main class="content">
+        <h2>Lista de productos</h2>
+
+        <section class="product-grid">
+            {% for producto in productos %}
+                <article class="product-card">
+                    <img class="product-image" src="{{ asset(producto.imagen) }}" alt="{{ producto.nombre }}">
+                    <div class="product-info">
+                        <h3>{{ producto.nombre }}</h3>
+                        <p>{{ producto.descripcion }}</p>
+                        <strong>${{ producto.precio }}</strong>
+                    </div>
+                </article>
+            {% else %}
+                <p>No hay productos cargados.</p>
+            {% endfor %}
+        </section>
     </main>
 {% endblock %}
