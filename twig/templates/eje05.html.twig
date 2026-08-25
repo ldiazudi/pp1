@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 5 - Incluir Plantilla</title>
+</head>
+<body>
+    {# Estructura del ejercicio 4 #}
+    {% if parametro == 0 %}
+        <h1>Encabezado Principal - Opción 0</h1>
+    {% else %}
+        <h1>Encabezado Principal - Opción 1</h1>
+    {% endif %}
+
+    <hr>
+
+    {# Inclusión de la plantilla del ejercicio 1 #}
+    {# Twig pasará automáticamente las variables necesarias si están en el contexto #}
+    {% include 'eje01.html.twig' %}
+</body>
+</html>
