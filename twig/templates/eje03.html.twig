@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3 - Países</title>
+</head>
+<body>
+    <h1>Lista de Países</h1>
+    <ul>
+    {% for codigo, datos in paises %}
+        <li>
+            <strong>Índice (Código):</strong> {{ codigo }} <br>
+            <strong>Nombre:</strong> {{ datos.nombre }} <br>
+            <strong>Lengua:</strong> {{ datos.lengua }} <br>
+            <strong>Moneda:</strong> {{ datos.moneda }}
+        </li>
+        <br>
+    {% endfor %}
+    </ul>
+</body>
+</html>
