@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Listado de Productos{% endblock %}
+
+{% block body %}
+    <header class="header">
+        <h1 class="title">Mi Carrito de Compras</h1>
+    </header>
+
+    <main style="padding: 20px;">
+        <p>{{ mensaje }}</p>
+        
+        {# Botón de ejemplo para usar los estilos requeridos #}
+        <button class="btn-light">Ver más detalles</button>
+    </main>
+{% endblock %}
