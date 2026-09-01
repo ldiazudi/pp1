@@ -7,8 +7,8 @@
         <h1 class="title">Carrito de Compras</h1>
 
         <nav>
-            <a class="btn-ligth" href="#">Ver Orden</a>
-            <a class="btn-ligth" href="#">Salir</a>
+            <a class="btn-light" href="#">Ver Orden</a>
+            <a class="btn-light" href="#">Salir</a>
         </nav>
     </header>
 
@@ -22,7 +22,10 @@
                     <div class="product-info">
                         <h3>{{ producto.nombre }}</h3>
                         <p>{{ producto.descripcion }}</p>
-                        <strong>${{ producto.precio }}</strong>
+                        <div class="product-footer">
+                            <a class="btn-dark" href="#">Ver detalles</a>
+                            <strong>Precio: $ {{ producto.precio }}</strong>
+                        </div>
                     </div>
                 </article>
             {% else %}
