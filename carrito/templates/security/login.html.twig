@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Autenticación{% endblock %}
+
+{% block body %}
+    <header class="header">
+        <h1 class="title">Carrito de Compras</h1>
+    </header>
+
+    <div class="login-page">
+        <div class="login-box">
+            <h2>Autenticación</h2>
+
+            {% if error %}
+                <p class="login-error">Usuario o contraseña incorrecta</p>
+            {% endif %}
+
+            <form action="{{ path('app_login') }}" method="post">
+                <p>
+                    <label for="username">Email:</label>
+                    <input type="text" id="username" name="_username" value="{{ last_username }}">
+                </p>
+                <p>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="_password">
+                </p>
+                <p class="login-submit">
+                    <button type="submit">Login</button>
+                </p>
+            </form>
+        </div>
+    </div>
+{% endblock %}

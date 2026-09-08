@@ -91,3 +91,61 @@ nav a {
     border-radius: 5px;
     font-size: 0.85rem;
 }
+
+.login-page {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.login-box {
+    background-color: white;
+    border: 1px solid black;
+    padding: 30px 50px;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+}
+
+.login-box form {
+    text-align: left;
+    display: inline-block;
+}
+
+.login-box form p {
+    margin: 0 0 10px 0;
+}
+
+.login-box label {
+    display: inline-block;
+    width: 80px;
+}
+
+.login-box input {
+    border: 1px solid #999;
+    padding: 3px 5px;
+}
+
+.login-submit {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-box button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 6px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-error {
+    color: red;
+    margin-bottom: 15px;
+}
