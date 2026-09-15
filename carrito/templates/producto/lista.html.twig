@@ -5,10 +5,14 @@
 {% block body %}
     <header class="header">
         <h1 class="title">Carrito de Compras</h1>
+        <br>
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <p>Bienvenido: {{ app.user.nombre }}</p>
+        {% endif %}
 
         <nav>
             <a class="btn-light" href="#">Ver Orden</a>
-            <a class="btn-light" href="#">Salir</a>
+            <a class="btn-light" href="{{ path('app_logout') }}">Salir</a>
         </nav>
     </header>
 
