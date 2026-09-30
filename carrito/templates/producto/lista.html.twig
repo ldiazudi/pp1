@@ -3,18 +3,11 @@
 {% block title %}Lista de productos{% endblock %}
 
 {% block body %}
-    <header class="header">
-        <h1 class="title">Carrito de Compras</h1>
-        <br>
-        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-        <p>Bienvenido: {{ app.user.nombre }}</p>
-        {% endif %}
+    {% include 'header.html.twig' %}
 
-        <nav>
-            <a class="btn-light" href="#">Ver Orden</a>
-            <a class="btn-light" href="{{ path('app_logout') }}">Salir</a>
-        </nav>
-    </header>
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <p>Bienvenido: {{ app.user.nombre }}</p>
+    {% endif %}
 
     <main class="content">
         <h2>Lista de productos</h2>
@@ -27,7 +20,7 @@
                         <h3>{{ producto.nombre }}</h3>
                         <p>{{ producto.descripcion }}</p>
                         <div class="product-footer">
-                            <a class="btn-dark" href="#">Ver detalles</a>
+                            <a class="btn-dark" href="{{ path('detalle_producto', {'id': producto.id}) }}">Ver detalles</a>
                             <strong>Precio: $ {{ producto.precio }}</strong>
                         </div>
                     </div>
