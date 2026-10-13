@@ -98,6 +98,16 @@ class Orden
         return $this;
     }
 
+    //metodo para agregar un item a la orden, sobrecargo
+    public function agregarItem(Producto $producto, int $cantidad): Item
+    {
+        $item = new Item();
+        $item->setProducto($producto);
+        $item->setCantidad($cantidad);
+        $this->addItem($item);
+        return $item;
+    }
+
     public function removeItem(Item $item): static
     {
         if ($this->item->removeElement($item)) {

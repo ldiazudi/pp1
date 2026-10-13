@@ -10,7 +10,13 @@
     {% endif %}
 
     <main class="content">
+        {% for message in app.flashes('notice') %}
+            <div class="flash-notice">
+                {{ message }}
+            </div>
+        {% endfor %}
         <h2>Lista de productos</h2>
+
 
         <section class="product-grid">
             {% for producto in productos %}

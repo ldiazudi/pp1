@@ -18,6 +18,12 @@
                 <h3>{{ producto.nombre }}</h3>
                 <p>{{ producto.descripcion }}</p>
                 <strong class="product-detail__price">Precio: $ {{ producto.precio }}</strong>
+                <form action="{{ path('agregar_producto') }}"  method="post">
+
+                    <input type="hidden" name="idProducto" value="{{ producto.id }}">
+                    <input type="text" name="cantidad">
+                    <button type="submit">Agregar a la orden</button>
+                </form>
                 <a class="btn-dark btn-volver" href="{{ path('listar_productos') }}">Volver</a>
             </div>
         </section>
